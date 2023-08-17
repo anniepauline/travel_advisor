@@ -4,12 +4,14 @@ import { alpha, makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   title: {
     display: 'none',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('xs')]: {
       display: 'block',
-      fontWeight:'bold',
       color:'#F5F5F5',
-      fontFamily:'Arial',
-      
+      fontFamily:'-apple-system',
+      textAlign: 'right',
+      fontSize:'1.5rem',
+      fontWeight: 600,
+      letterSpacing: '-0.2px',
     },
   },
   search: {
@@ -20,10 +22,10 @@ export default makeStyles((theme) => ({
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
-    [theme.breakpoints.up('sm')]: { marginLeft: theme.spacing(3), width: 'auto' },
+    [theme.breakpoints.up('sm')]: { marginLeft: theme.spacing(3), width: 'auto',},
   },
   searchIcon: {
-    padding: theme.spacing(0, 2), height: '100%', position: 'absolute', pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center',
+    padding: theme.spacing(0, 2), height: '10%', position: 'absolute', pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center',
   },
   inputRoot: {
     color: 'inherit',
@@ -36,4 +38,12 @@ export default makeStyles((theme) => ({
         backgroundImage:' linear-gradient(to left, #6DA9E4, #19376D)',
 
   },
+  image:{
+    height:'3.2vh',
+    width:'3.2vh',
+    display:'flex-inline',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin:'1px 6px -4px',
+  }
 }));

@@ -15,7 +15,7 @@ function Map({setCoordinates,setBounds,coordinates,places,setChildClicked})
             <GoogleMapReact bootstrapURLKeys={{key:process.env.REACT_APP_GOOGLE_MAPS_API_KEY}}
                             defaultCenter={coordinates}
                             center={coordinates}
-                            defaultZoom={16}
+                            defaultZoom={14}
                             margin={[50,50,50,50]}
                             options={{disableDefaultUI:true,zoomControl:true,}}
                             onChange={(e)=>{
@@ -33,7 +33,7 @@ function Map({setCoordinates,setBounds,coordinates,places,setChildClicked})
                                                 !isDesktop ? (<LocationOnOutlined color="primary" fontSize="large"/>)
                                                         :  (
                                                         <Paper elevation={3} className={classes.paper}>
-                                                                <Typography className={classes.typography} varient="subtitle2" gutterBottom>
+                                                                <Typography className={classes.typography} varient="p" gutterBottom >
                                                                     {place.name}
                                                                 </Typography>
                                                                 <img 

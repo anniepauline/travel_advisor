@@ -31,15 +31,12 @@ function App() {
     useEffect(() => {
         const filtered = places?.filter((place) => Number(place.rating) > rating);
         setFilteredPlaces(filtered);
-        console.log("Filterted:",filteredPlaces);
       }, [rating]);
 
     //type/coordinate/bound change
     useEffect(() => {
         if(bounds.sw && bounds.ne)
         {
-            console.log("coordinates:",coordinates);
-            console.log("Bounds:",bounds);
             setIsLoading(true);
 
             getPlacesData(type,bounds)

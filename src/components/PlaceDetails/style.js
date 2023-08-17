@@ -9,6 +9,6 @@ export default makeStyles(() => ({
   },
   spacing: {
     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-    paddingTop:'20px'
+    paddingTop:'10px'
   },
 }));

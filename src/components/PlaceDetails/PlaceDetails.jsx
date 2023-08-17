@@ -15,7 +15,7 @@ function PlaceDetails({ place,selected,refProp }) {
                 image={place.photo ? place.photo.images.large.url : 'https://www.mapleleaffoods.com/wp-content/uploads/sites/6/2022/06/TFS-Feature-wings.jpg'}
                 title={place.name} />
             <CardContent>
-                <Typography gutterBottom varient="h5">{place.name}</Typography>
+                <Typography gutterBottom variant="h6" >{place.name}</Typography>
                 <Box display="flex" justifyContent="space-between">
                     <Rating  value={Number(place.rating)} readOnly/>
                     <Typography gutterBottom varient="subtitle1">out of {place.num_reviews} reviews</Typography>

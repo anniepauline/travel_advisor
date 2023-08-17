@@ -3,6 +3,7 @@
     import { AppBar,Toolbar,Typography,Box } from "@material-ui/core";
     import useStyles from "./style"
     import { GEO_API_URL,geoApiOptions } from "../../api/api";
+    import image from "../../map.png"
 
     function Header({setCoordinates})
     {
@@ -14,8 +15,7 @@
         control: (provided, state) => ({
             ...provided,
             borderRadius: '5px',
-            border: '2px solid #ccc',
-            boxShadow: state.isFocused ? '0 0 0 2px #000000' : null,
+            border: '1px solid #ccc',
             minWidth: '20vw',
             height: '2vw' 
         }),
@@ -52,21 +52,18 @@
         return(
             <AppBar position="static">
                 <Toolbar className ={classes.toolbar}>
-                    <Typography variant="h5" className ={classes.title}>
+                    <Typography variant="h6" className ={classes.title}>
+                        <img src = {image} className = {classes.image}/>
                         Trello
                     </Typography>
-                    <Box display="flex">
-                    <Typography variant="h6" className ={classes.title}>
-                        Explore new places
-                    </Typography>
-                   
+                    <Box display="flex">                  
                         <div className = {classes.search}>
-                            <div className = {classes.SearchIcon}>                               
+                            <div >                               
                             </div>
                             <AsyncPaginate 
                                         styles={customStyles}
                                         value = {search}
-                                        placeholder="Search..." 
+                                        placeholder="Search cities" 
                                         debounceTimeout={600}
                                         onChange={handleOnChange}
                                         loadOptions={loadOptions}

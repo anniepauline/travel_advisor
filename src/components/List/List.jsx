@@ -16,7 +16,7 @@ function List({ places, childClicked, isLoading ,setRating,setType,rating,type})
     }, [places])
 
     return (
-        <div>
+        <div className={classes.listContainer}>
             <Typography variant="h4" className={classes.header}>
                 Restaurants, Hotels and Attractions
             </Typography>
@@ -28,8 +28,8 @@ function List({ places, childClicked, isLoading ,setRating,setType,rating,type})
                 (
                     <>
                         <FormControl className={classes.formControl}>
-                            <InputLabel  className={classes.InputLabel}>Select a type</InputLabel>
-                            <Select value={type} onChange={(e) => { setType(e.target.value) }}>
+                            <InputLabel  className={classes.inputLabel}>Select a type</InputLabel>
+                            <Select className={classes.select} value={type} onChange={(e) => { setType(e.target.value) }}>
                                 <MenuItem value="restaurants">Restaurants</MenuItem>
                                 <MenuItem value="hotels">Hotels</MenuItem>
                                 <MenuItem value="attractions">Attractions</MenuItem>
@@ -37,9 +37,9 @@ function List({ places, childClicked, isLoading ,setRating,setType,rating,type})
                         </FormControl>
 
                         <FormControl className={classes.formControl}>
-                            <InputLabel size="normal" focused>Rating</InputLabel>
-                            <Select value={rating} onChange={(e) => { setRating(e.target.value) }}>
-                                <MenuItem value="">All</MenuItem>
+                            <InputLabel className={classes.inputLabel} size="normal" focused>Rating</InputLabel>
+                            <Select className={classes.select} value={rating} onChange={(e) => { setRating(e.target.value) }}>
+                                <MenuItem value="All">All</MenuItem>
                                 <MenuItem value={3}>Above 3.0</MenuItem>
                                 <MenuItem value={4}>Above 4.0</MenuItem>
                                 <MenuItem value={4.5}>Above 4.5</MenuItem>
